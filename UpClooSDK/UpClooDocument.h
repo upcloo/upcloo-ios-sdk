@@ -10,8 +10,10 @@
 
 @interface UpClooDocument : NSObject {
     NSMutableString *title;
+    NSMutableString *url;
 }
 
 @property (nonatomic, retain) NSMutableString *title;
+@property (nonatomic, retain) NSMutableString *url;
 
 @end

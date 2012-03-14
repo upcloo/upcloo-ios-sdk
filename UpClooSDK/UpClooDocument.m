@@ -10,6 +10,6 @@
 
 @implementation UpClooDocument
 
-@synthesize title;
+@synthesize title, url;
 
 @end

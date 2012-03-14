@@ -12,6 +12,7 @@
 
 #define ELEMENT_DOC @"doc"
 #define ELEMENT_TITLE @"title"
+#define ELEMENT_URL @"url"
 
 @interface UpClooDocuments : NSObject <NSXMLParserDelegate> {
     NSMutableArray *documents;

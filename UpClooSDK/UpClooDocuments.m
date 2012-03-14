@@ -46,9 +46,14 @@
 {
     if ([elementName isEqual:ELEMENT_DOC]) {
         self.document = [[UpClooDocument alloc] init];
+        self.document.title = [NSMutableString stringWithString:@""];
+        self.document.url = [NSMutableString stringWithString:@""];
+        
         actualElement = ELEMENT_DOC;
     } else if ([elementName isEqual:ELEMENT_TITLE]) {
         actualElement = ELEMENT_TITLE;
+    } else if ([elementName isEqual:ELEMENT_URL]) {
+        actualElement = ELEMENT_URL;
     }
 }
 
@@ -56,19 +61,17 @@
 {
     if ([elementName isEqual:ELEMENT_DOC]) {
         [documents addObject:document];
-
-        actualElement = nil;
     }
+    
+    actualElement = @"";
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     if ([actualElement isEqual:ELEMENT_TITLE]) {
-        if (document.title == nil) {
-            document.title = [NSMutableString stringWithString:string];
-        } else {
-            [document.title stringByAppendingString:string];
-        }
+        [document.title appendString:string];
+    } else if ([actualElement isEqual:ELEMENT_URL]) {
+        [document.url appendString:string];
     }
 }
 

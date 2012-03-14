@@ -48,7 +48,11 @@ NSMutableData *xmlData;
     UpClooDocument *doc = (UpClooDocument *)[documents.documents objectAtIndex:0];
 
     if (![doc.title isEqualToString:@"Zend_Soap_Server compatibile con Java e C#"]) {
-        STFail(@"Title and parsed title is different");
+        STFail([NSString stringWithFormat:@"Title %@ and parsed title is different", doc.title]);
+    }
+
+    if (![doc.url isEqualToString:@"http://walterdalmut.com/2012/02/15/zend_soap_server-compatibile-con-java-e-c-sharp/"]) {
+        STFail([NSString stringWithFormat:@"URL %@ and parsed URL is different", doc.url]);
     }
 }
 
