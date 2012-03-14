@@ -46,13 +46,13 @@
 - (void)testSetCredential
 {
     UpClooSDK *manager = [UpClooSDK sharedManager];
-    [manager setCredential:SITEKEY :PASSWORD];
+    [manager setCredential:PASSWORD :SITEKEY]; //Reversed for override
     
-    if (![manager.sitekey isEqual: SITEKEY]) {
+    if (![manager.sitekey isEqual: PASSWORD]) {
         STFail(@"Sitekey previously setted actually is missing...");
     }
     
-    if (![manager.password isEqual:PASSWORD]) {
+    if (![manager.password isEqual:SITEKEY]) {
         STFail(@"Password previously setted actually is missing...");
     }
 }
