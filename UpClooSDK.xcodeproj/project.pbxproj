@@ -37,7 +37,6 @@
 		429058EE15112D3100C5E16C /* UpClooGetDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooGetDelegate.h; sourceTree = "<group>"; };
 		429058F01511360300C5E16C /* UpClooDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocuments.h; sourceTree = "<group>"; };
 		429058F11511360300C5E16C /* UpClooDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocuments.m; sourceTree = "<group>"; };
-		429058F41511376600C5E16C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		42BF8FC3151082080040811E /* libUpClooSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUpClooSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BF8FC6151082080040811E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
@@ -131,7 +130,6 @@
 				42BF8FCB151082080040811E /* UpClooSDK.h */,
 				42BF8FCC151082080040811E /* UpClooSDK.m */,
 				42BF8FC9151082080040811E /* Supporting Files */,
-				429058F41511376600C5E16C /* README.md */,
 			);
 			path = UpClooSDK;
 			sourceTree = "<group>";
