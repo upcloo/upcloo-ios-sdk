@@ -7,14 +7,19 @@
 //
 
 #import "UpClooDocumentsTests.h"
+#import "UpClooDocuments.h"
 
 @implementation UpClooDocumentsTests
+
+NSMutableData *xmlData;
 
 - (void)setUp
 {
     [super setUp];
     
     // Set-up code here.
+    NSString *xml = @"<docs><doc><title>ciao</title></doc></docs>";
+    xmlData = [NSMutableData dataWithData:[xml dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)tearDown
@@ -24,9 +29,18 @@
     [super tearDown];
 }
 
-- (void)test
+- (void)testParsing
 {
+    UpClooDocuments *documents = [[UpClooDocuments alloc] initWithNSMutableData:xmlData];
+    [documents start];
     
+    while (!documents.parseEnds) {
+        //wait
+    }
+    
+    STAssertTrue(documents.documents.count > 0, 
+                 [NSString stringWithFormat: @"FAILURE: Library says that have %d documents?", documents.documents.count]);
+
 }
 
 @end

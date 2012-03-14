@@ -15,12 +15,14 @@
 @synthesize documents, document;
 @synthesize xmlData;
 @synthesize actualElement;
+@synthesize parseEnds;
 
 - (id)initWithNSMutableData:(NSMutableData *)data
 {
     if (self = [super init])
     {
         self.xmlData = data;
+        self.documents = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -30,6 +32,8 @@
 {
     NSXMLParser *parser = [[NSXMLParser alloc] initWithData:self.xmlData];
     parser.delegate = self;
+    
+    self.parseEnds = NO;
     
     [parser setShouldProcessNamespaces:NO];
     [parser setShouldReportNamespacePrefixes:NO];
@@ -54,7 +58,6 @@
         [documents addObject:document];
 
         actualElement = nil;
-        document = nil;
     }
 }
 
@@ -73,6 +76,7 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
+    parseEnds = YES;
     //handle ends
     UpClooSDK *manager = [UpClooSDK sharedManager];
     [manager.delegate upclooContentsReady:self];

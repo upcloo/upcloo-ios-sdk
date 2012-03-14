@@ -19,12 +19,15 @@
     
     UpClooDocument *document;
     NSString *actualElement;
+    BOOL parseEnds;
 }
 
 @property (nonatomic, retain) NSMutableArray *documents;
 @property (nonatomic, retain) NSMutableData *xmlData;
 @property (nonatomic, retain) UpClooDocument *document;
 @property (nonatomic, retain) NSString *actualElement;
+
+@property BOOL parseEnds;
 
 - (id)initWithNSMutableData: (NSMutableData *)data;
 - (void)start;
