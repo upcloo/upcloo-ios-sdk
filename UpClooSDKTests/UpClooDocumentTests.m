@@ -30,7 +30,7 @@
 - (void)testFields
 {
     UpClooDocument *document = [[UpClooDocument alloc] init];
-    document.title = TITLE;
+    document.title = [TITLE mutableCopy];
     
     STAssertEquals(@"title", TITLE, @"FAILURE: title not valid");
 }

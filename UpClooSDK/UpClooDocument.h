@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface UpClooDocument : NSObject {
-    NSString *title;
+    NSMutableString *title;
 }
 
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSMutableString *title;
 
 @end

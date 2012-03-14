@@ -65,7 +65,7 @@
 {
     if ([actualElement isEqual:ELEMENT_TITLE]) {
         if (document.title == nil) {
-            document.title = [NSString stringWithString:string];
+            document.title = [NSMutableString stringWithString:string];
         } else {
             [document.title stringByAppendingString:string];
         }
