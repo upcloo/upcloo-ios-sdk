@@ -13,7 +13,7 @@ static UpClooSDK *sharedManager = nil;
 
 @implementation UpClooSDK
 
-@synthesize sitekey,vsitekeys,password;
+@synthesize sitekey,password;
 @synthesize delegate;
 
 @synthesize receivedData;
@@ -36,11 +36,6 @@ static UpClooSDK *sharedManager = nil;
 
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
-}
-
-- (void)addVirtualSitekey:(NSString *)vsitekey
-{
-    [self.vsitekeys addObject:vsitekey];
 }
 
 - (void)setCredential: (NSString *)s: (NSString *)p
