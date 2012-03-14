@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class UpClooDocument;
+
 @interface UpClooSDK : NSObject {
     NSString *sitekey;
     NSString *password;
@@ -21,5 +23,9 @@
 @property (nonatomic, retain) NSMutableArray *vsitekeys;
 
 - (void)addVirtualSitekey: (NSString *)vsitekey;
+- (void)setCredential: (NSString *)s :(NSString *)p;
+
+
+- (UpClooDocument *)get:(NSString *)idKey;
 
 @end

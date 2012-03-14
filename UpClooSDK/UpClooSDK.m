@@ -7,6 +7,7 @@
 //
 
 #import "UpClooSDK.h"
+#import "UpClooDocument.h"
 
 static UpClooSDK *sharedManager = nil;
 
@@ -37,6 +38,17 @@ static UpClooSDK *sharedManager = nil;
 - (void)addVirtualSitekey:(NSString *)vsitekey
 {
     [self.vsitekeys addObject:vsitekey];
+}
+
+- (void)setCredential: (NSString *)s: (NSString *)p
+{
+    self.sitekey = s;
+    self.password = p;
+}
+
+- (UpClooDocument *)get:(NSString *)idKey
+{
+    return nil;
 }
 
 @end
