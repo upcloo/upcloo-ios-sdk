@@ -34,13 +34,9 @@
 - (void)testSingletonBase
 {
     UpClooSDK *manager = [UpClooSDK sharedManager];
-    if (![manager.sitekey isEqual: SITEKEY]) {
-        STFail(@"Sitekey previously setted actually is missing...");
-    }
+    STAssertEquals(SITEKEY, manager.sitekey, @"Sitekey previously setted actually is missing...");
     
-    if (![manager.password isEqual:PASSWORD]) {
-        STFail(@"Password previously setted actually is missing...");
-    }
+    STAssertEquals(PASSWORD, manager.password, @"Password previously setted actually is missing...");
 }
 
 - (void)testSetCredential
@@ -48,13 +44,8 @@
     UpClooSDK *manager = [UpClooSDK sharedManager];
     [manager setCredential:PASSWORD :SITEKEY]; //Reversed for override
     
-    if (![manager.sitekey isEqual: PASSWORD]) {
-        STFail(@"Sitekey previously setted actually is missing...");
-    }
-    
-    if (![manager.password isEqual:SITEKEY]) {
-        STFail(@"Password previously setted actually is missing...");
-    }
+    STAssertEquals(PASSWORD, manager.sitekey, @"Sitekey previously setted actually is missing...");
+    STAssertEquals(SITEKEY, manager.password, @"Password previously setted actually is missing...");
 }
 
 @end
