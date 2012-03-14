@@ -67,6 +67,21 @@ For using you have to implements it at your controller and implements methods.
 }
 ```
 
+## Documents structure
+
+Documents are divided into two containers: ```UpClooDocuments``` and ```UpClooDocument```. 
+First type encapsulate the second one using an ```NSArray``` structure.
+
+For that reason if you want to get elements you have to do:
+
+```
+//documents variable is a valid and filled UpClooDocuments instance
+int i;
+for (i=0; i<documents.documents.count; i++) {
+    UpClooDocument *document = (UpClooDocument *)[documents.documents objectAtIndex: i];
+    NSLog(@"%@", document.title);
+}
+```
 
 ## Unit Tests
 
