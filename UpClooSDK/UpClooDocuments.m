@@ -64,7 +64,11 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     if ([actualElement isEqual:ELEMENT_TITLE]) {
-        document.title = string;
+        if (document.title == nil) {
+            document.title = [NSString stringWithString:string];
+        } else {
+            [document.title stringByAppendingString:string];
+        }
     }
 }
 

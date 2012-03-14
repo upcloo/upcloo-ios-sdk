@@ -8,6 +8,7 @@
 
 #import "UpClooDocumentsTests.h"
 #import "UpClooDocuments.h"
+#import "UpClooDocument.h"
 
 @implementation UpClooDocumentsTests
 
@@ -41,6 +42,14 @@ NSMutableData *xmlData;
     STAssertTrue(documents.documents.count > 0, 
                  [NSString stringWithFormat: @"FAILURE: Library says that have %d documents?", documents.documents.count]);
 
+    STAssertTrue(documents.documents.count == 10, 
+             [NSString stringWithFormat: @"FAILURE: Library says that have %d documents but I want 10 docs?", documents.documents.count]);
+
+    UpClooDocument *doc = (UpClooDocument *)[documents.documents objectAtIndex:0];
+
+    if (![doc.title isEqualToString:@"Zend_Soap_Server compatibile con Java e C#"]) {
+        STFail(@"Title and parsed title is different");
+    }
 }
 
 @end
