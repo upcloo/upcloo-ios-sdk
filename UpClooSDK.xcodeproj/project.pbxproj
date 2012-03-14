@@ -11,6 +11,8 @@
 		429058ED15112BA600C5E16C /* UpClooDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058EB15112BA600C5E16C /* UpClooDocument.m */; };
 		429058F21511360300C5E16C /* UpClooDocuments.h in Headers */ = {isa = PBXBuildFile; fileRef = 429058F01511360300C5E16C /* UpClooDocuments.h */; };
 		429058F31511360300C5E16C /* UpClooDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058F11511360300C5E16C /* UpClooDocuments.m */; };
+		429058FD15114FF600C5E16C /* UpClooDocumentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058FC15114FF600C5E16C /* UpClooDocumentsTests.m */; };
+		429059001511509F00C5E16C /* UpClooDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058FF1511509F00C5E16C /* UpClooDocumentTests.m */; };
 		42BF8FC7151082080040811E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FC6151082080040811E /* Foundation.framework */; };
 		42BF8FCD151082080040811E /* UpClooSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8FCC151082080040811E /* UpClooSDK.m */; };
 		42BF8FD5151082080040811E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FD4151082080040811E /* SenTestingKit.framework */; };
@@ -37,6 +39,10 @@
 		429058EE15112D3100C5E16C /* UpClooGetDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooGetDelegate.h; sourceTree = "<group>"; };
 		429058F01511360300C5E16C /* UpClooDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocuments.h; sourceTree = "<group>"; };
 		429058F11511360300C5E16C /* UpClooDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocuments.m; sourceTree = "<group>"; };
+		429058FB15114FF600C5E16C /* UpClooDocumentsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocumentsTests.h; sourceTree = "<group>"; };
+		429058FC15114FF600C5E16C /* UpClooDocumentsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocumentsTests.m; sourceTree = "<group>"; };
+		429058FE1511509F00C5E16C /* UpClooDocumentTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocumentTests.h; sourceTree = "<group>"; };
+		429058FF1511509F00C5E16C /* UpClooDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocumentTests.m; sourceTree = "<group>"; };
 		42BF8FC3151082080040811E /* libUpClooSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUpClooSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BF8FC6151082080040811E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
@@ -147,6 +153,10 @@
 			children = (
 				42BF8FE2151082080040811E /* UpClooSDKTests.h */,
 				42BF8FE3151082080040811E /* UpClooSDKTests.m */,
+				429058FB15114FF600C5E16C /* UpClooDocumentsTests.h */,
+				429058FC15114FF600C5E16C /* UpClooDocumentsTests.m */,
+				429058FE1511509F00C5E16C /* UpClooDocumentTests.h */,
+				429058FF1511509F00C5E16C /* UpClooDocumentTests.m */,
 				42BF8FDD151082080040811E /* Supporting Files */,
 			);
 			path = UpClooSDKTests;
@@ -282,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BF8FE4151082080040811E /* UpClooSDKTests.m in Sources */,
+				429058FD15114FF600C5E16C /* UpClooDocumentsTests.m in Sources */,
+				429059001511509F00C5E16C /* UpClooDocumentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
