@@ -7,6 +7,10 @@
 //
 
 #import "UpClooSDKTests.h"
+#import "UpClooSDK.h"
+
+#define SITEKEY @"test-sitekey"
+#define PASSWORD @"example"
 
 @implementation UpClooSDKTests
 
@@ -15,6 +19,9 @@
     [super setUp];
     
     // Set-up code here.
+    UpClooSDK *manager = [UpClooSDK sharedManager];
+    manager.sitekey = SITEKEY;
+    manager.password = PASSWORD;
 }
 
 - (void)tearDown
@@ -24,9 +31,30 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSingletonBase
 {
-    STFail(@"Unit tests are not implemented yet in UpClooSDKTests");
+    UpClooSDK *manager = [UpClooSDK sharedManager];
+    if (![manager.sitekey isEqual: SITEKEY]) {
+        STFail(@"Sitekey previously setted actually is missing...");
+    }
+    
+    if (![manager.password isEqual:PASSWORD]) {
+        STFail(@"Password previously setted actually is missing...");
+    }
+}
+
+- (void)testSetCredential
+{
+    UpClooSDK *manager = [UpClooSDK sharedManager];
+    [manager setCredential:SITEKEY :PASSWORD];
+    
+    if (![manager.sitekey isEqual: SITEKEY]) {
+        STFail(@"Sitekey previously setted actually is missing...");
+    }
+    
+    if (![manager.password isEqual:PASSWORD]) {
+        STFail(@"Password previously setted actually is missing...");
+    }
 }
 
 @end
