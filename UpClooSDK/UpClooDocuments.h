@@ -10,6 +10,9 @@
 
 @class UpClooDocument;
 
+#define ELEMENT_DOC @"doc"
+#define ELEMENT_TITLE @"title"
+
 @interface UpClooDocuments : NSObject <NSXMLParserDelegate> {
     NSMutableArray *documents;
     NSMutableData *xmlData;

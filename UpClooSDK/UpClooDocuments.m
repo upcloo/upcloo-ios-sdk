@@ -40,17 +40,17 @@
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
-    if ([elementName isEqual:@"doc"]) {
+    if ([elementName isEqual:ELEMENT_DOC]) {
         self.document = [[UpClooDocument alloc] init];
-        actualElement = @"doc";
-    } else if ([elementName isEqual:@"title"]) {
-        actualElement = @"title";
+        actualElement = ELEMENT_DOC;
+    } else if ([elementName isEqual:ELEMENT_TITLE]) {
+        actualElement = ELEMENT_TITLE;
     }
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
-    if ([elementName isEqual:@"doc"]) {
+    if ([elementName isEqual:ELEMENT_DOC]) {
         [documents addObject:document];
 
         actualElement = nil;
@@ -60,7 +60,7 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-    if ([actualElement isEqual:@"title"]) {
+    if ([actualElement isEqual:ELEMENT_TITLE]) {
         document.title = string;
     }
 }
