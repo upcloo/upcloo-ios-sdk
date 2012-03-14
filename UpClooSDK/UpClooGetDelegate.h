@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "UpClooDocuments.h"
+
 @protocol UpClooGetDelegate <NSObject>
-- (void)upclooContentsReady:(NSArray *)documents;
+- (void)upclooContentsReady:(UpClooDocuments *)documents;
 - (void)upclooUnableToGetContentsWithMessage: (NSString *)message;
 @end

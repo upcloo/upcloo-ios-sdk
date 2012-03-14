@@ -7,7 +7,7 @@
 //
 
 #import "UpClooSDK.h"
-#import "UpClooDocument.h"
+#import "UpClooDocuments.h"
 
 static UpClooSDK *sharedManager = nil;
 
@@ -78,9 +78,39 @@ static UpClooSDK *sharedManager = nil;
             receivedData = [NSMutableData data];
         } else {
             [self.delegate upclooUnableToGetContentsWithMessage:
-             [NSString stringWithFormat:@"Unable to connect to %@, please check your internet connection", UPCLOO_REPOSITORY_PATH]];
+             [NSString stringWithFormat:
+              @"Unable to connect to %@, please check your internet connection", 
+              UPCLOO_REPOSITORY_PATH]];
         }
     }
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    //Reset data length
+    [receivedData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    //Add data
+    [receivedData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
+    // inform the user
+    [self.delegate upclooUnableToGetContentsWithMessage:[error localizedDescription]];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    //todo: parse the response and create upcloo document
+    UpClooDocuments *documents = [[UpClooDocuments alloc] 
+                                  initWithNSMutableData:receivedData];
+    
+    [self.delegate upclooContentsReady:documents];
 }
 
 @end
