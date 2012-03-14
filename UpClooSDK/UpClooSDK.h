@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UpClooGetDelegate.h"
 
 @class UpClooDocument;
 
@@ -22,10 +23,9 @@
 @property (nonatomic, retain) NSString *password;
 @property (nonatomic, retain) NSMutableArray *vsitekeys;
 
+@property (nonatomic, retain) id <UpClooGetDelegate> delegate;
+
 - (void)addVirtualSitekey: (NSString *)vsitekey;
 - (void)setCredential: (NSString *)s :(NSString *)p;
-
-
-- (UpClooDocument *)get:(NSString *)idKey;
 
 @end

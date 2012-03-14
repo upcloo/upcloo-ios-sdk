@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		429058EA15112BA600C5E16C /* UpClooDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocument.h; sourceTree = "<group>"; };
 		429058EB15112BA600C5E16C /* UpClooDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocument.m; sourceTree = "<group>"; };
+		429058EE15112D3100C5E16C /* UpClooGetDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooGetDelegate.h; sourceTree = "<group>"; };
 		42BF8FC3151082080040811E /* libUpClooSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUpClooSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BF8FC6151082080040811E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
@@ -78,6 +79,14 @@
 			name = models;
 			sourceTree = "<group>";
 		};
+		429058EF15112D3A00C5E16C /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				429058EE15112D3100C5E16C /* UpClooGetDelegate.h */,
+			);
+			name = delegates;
+			sourceTree = "<group>";
+		};
 		42BF8FB8151082070040811E = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +119,7 @@
 		42BF8FC8151082080040811E /* UpClooSDK */ = {
 			isa = PBXGroup;
 			children = (
+				429058EF15112D3A00C5E16C /* delegates */,
 				429058E815112B8000C5E16C /* models */,
 				42BF8FCB151082080040811E /* UpClooSDK.h */,
 				42BF8FCC151082080040811E /* UpClooSDK.m */,

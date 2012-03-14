@@ -14,6 +14,7 @@ static UpClooSDK *sharedManager = nil;
 @implementation UpClooSDK
 
 @synthesize sitekey,vsitekeys,password;
+@synthesize delegate;
 
 #pragma mark Singleton methods
 + (id)sharedManager{
@@ -44,11 +45,6 @@ static UpClooSDK *sharedManager = nil;
 {
     self.sitekey = s;
     self.password = p;
-}
-
-- (UpClooDocument *)get:(NSString *)idKey
-{
-    return nil;
 }
 
 @end
