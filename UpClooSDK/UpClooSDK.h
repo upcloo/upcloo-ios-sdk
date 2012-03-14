@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "UpClooGetDelegate.h"
 
+#define UPCLOO_REPOSITORY_PATH      @"repository.upcloo.com"
+#define UPCLOO_REPOSITORY           @"http://repository.upcloo.com/%@/%@"
+#define UPCLOO_REPOSITORY_VSITEKEY  @"http://repository.upcloo.com/%@/%@/%@"
+
 @class UpClooDocument;
 
 @interface UpClooSDK : NSObject {
@@ -23,9 +27,13 @@
 @property (nonatomic, retain) NSString *password;
 @property (nonatomic, retain) NSMutableArray *vsitekeys;
 
+@property (nonatomic, retain) NSMutableData *receivedData;
+
 @property (nonatomic, retain) id <UpClooGetDelegate> delegate;
 
 - (void)addVirtualSitekey: (NSString *)vsitekey;
 - (void)setCredential: (NSString *)s :(NSString *)p;
+
+- (void)get:(NSString *)idKey;
 
 @end

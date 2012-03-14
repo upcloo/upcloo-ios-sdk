@@ -16,6 +16,8 @@ static UpClooSDK *sharedManager = nil;
 @synthesize sitekey,vsitekeys,password;
 @synthesize delegate;
 
+@synthesize receivedData;
+
 #pragma mark Singleton methods
 + (id)sharedManager{
     @synchronized(self) {
@@ -45,6 +47,40 @@ static UpClooSDK *sharedManager = nil;
 {
     self.sitekey = s;
     self.password = p;
+}
+
+- (void)get:(NSString *)idKey
+{
+    [self getFromVirtualSitekey:idKey :nil];
+}
+
+- (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey
+{
+    if (self.delegate == nil) {
+        NSLog(@"WARNING! You have to set a delegate for get end document.");
+    } else {
+        NSString *repositoryUrl = nil;
+        if (vsitekey == nil) {
+            //Get from base repository
+            repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY, self.sitekey, idKey];
+        } else {
+            //Get form virtual sitekey
+            repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY_VSITEKEY, self.sitekey, vsitekey, idKey];
+        }
+        
+        NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:repositoryUrl] 
+                                                    cachePolicy: NSURLRequestUseProtocolCachePolicy 
+                                                timeoutInterval:8];
+        NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest
+                                                                         delegate:self];
+
+        if (theConnection) {
+            receivedData = [NSMutableData data];
+        } else {
+            [self.delegate upclooUnableToGetContentsWithMessage:
+             [NSString stringWithFormat:@"Unable to connect to %@, please check your internet connection", UPCLOO_REPOSITORY_PATH]];
+        }
+    }
 }
 
 @end
