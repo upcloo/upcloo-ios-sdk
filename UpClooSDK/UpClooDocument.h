@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UpClooDocument : NSObject
+@interface UpClooDocument : NSObject {
+    NSString *title;
+}
+
+@property (nonatomic, retain) NSString *title;
 
 @end
