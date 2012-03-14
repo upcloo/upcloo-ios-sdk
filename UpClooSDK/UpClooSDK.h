@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UpClooSDK : NSObject
+@interface UpClooSDK : NSObject {
+    NSString *sitekey;
+    NSString *password;
+    NSMutableArray *vsitekeys;
+}
+
++(id)sharedManager;
+
+@property (nonatomic, retain) NSString *sitekey;
+@property (nonatomic, retain) NSString *password;
+@property (nonatomic, retain) NSMutableArray *vsitekeys;
+
+- (void)addVirtualSitekey: (NSString *)vsitekey;
 
 @end

@@ -30,15 +30,15 @@
 /* Begin PBXFileReference section */
 		42BF8FC3151082080040811E /* libUpClooSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUpClooSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BF8FC6151082080040811E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
-		42BF8FCB151082080040811E /* UpClooSDK.h */ = {isa = PBXFileReference; path = UpClooSDK.h; sourceTree = "<group>"; };
+		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
+		42BF8FCB151082080040811E /* UpClooSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooSDK.h; sourceTree = "<group>"; };
 		42BF8FCC151082080040811E /* UpClooSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpClooSDK.m; sourceTree = "<group>"; };
 		42BF8FD3151082080040811E /* UpClooSDKTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpClooSDKTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BF8FD4151082080040811E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		42BF8FD6151082080040811E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		42BF8FDE151082080040811E /* UpClooSDKTests-Info.plist */ = {isa = PBXFileReference; path = "UpClooSDKTests-Info.plist"; sourceTree = "<group>"; };
+		42BF8FDE151082080040811E /* UpClooSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UpClooSDKTests-Info.plist"; sourceTree = "<group>"; };
 		42BF8FE0151082080040811E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		42BF8FE2151082080040811E /* UpClooSDKTests.h */ = {isa = PBXFileReference; path = UpClooSDKTests.h; sourceTree = "<group>"; };
+		42BF8FE2151082080040811E /* UpClooSDKTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooSDKTests.h; sourceTree = "<group>"; };
 		42BF8FE3151082080040811E /* UpClooSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpClooSDKTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
