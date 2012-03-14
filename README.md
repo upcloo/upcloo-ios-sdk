@@ -6,7 +6,7 @@ This SDK is intented for iOS applications
 
 ## Example of usage
 
-***todo: add docs for import ```.a``` static library
+***todo: add docs for import ```.a``` static library***
 
 First of all you have to require the SDK
 
