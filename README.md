@@ -66,3 +66,9 @@ For using you have to implements it at your controller and implements methods.
     //Show the error or handle it
 }
 ```
+
+
+## Unit Tests
+
+All tests are into UpClooSDKTests folder
+
