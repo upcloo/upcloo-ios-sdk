@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42BF8FC7151082080040811E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FC6151082080040811E /* Foundation.framework */; };
+		42BF8FCD151082080040811E /* UpClooSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8FCC151082080040811E /* UpClooSDK.m */; };
+		42BF8FD5151082080040811E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FD4151082080040811E /* SenTestingKit.framework */; };
+		42BF8FD7151082080040811E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FD6151082080040811E /* UIKit.framework */; };
+		42BF8FD8151082080040811E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FC6151082080040811E /* Foundation.framework */; };
+		42BF8FDB151082080040811E /* libUpClooSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FC3151082080040811E /* libUpClooSDK.a */; };
+		42BF8FE1151082080040811E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42BF8FDF151082080040811E /* InfoPlist.strings */; };
+		42BF8FE4151082080040811E /* UpClooSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8FE3151082080040811E /* UpClooSDKTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42BF8FD9151082080040811E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42BF8FBA151082070040811E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42BF8FC2151082080040811E;
+			remoteInfo = UpClooSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42BF8FC3151082080040811E /* libUpClooSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUpClooSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		42BF8FC6151082080040811E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
+		42BF8FCB151082080040811E /* UpClooSDK.h */ = {isa = PBXFileReference; path = UpClooSDK.h; sourceTree = "<group>"; };
+		42BF8FCC151082080040811E /* UpClooSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpClooSDK.m; sourceTree = "<group>"; };
+		42BF8FD3151082080040811E /* UpClooSDKTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpClooSDKTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42BF8FD4151082080040811E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		42BF8FD6151082080040811E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		42BF8FDE151082080040811E /* UpClooSDKTests-Info.plist */ = {isa = PBXFileReference; path = "UpClooSDKTests-Info.plist"; sourceTree = "<group>"; };
+		42BF8FE0151082080040811E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42BF8FE2151082080040811E /* UpClooSDKTests.h */ = {isa = PBXFileReference; path = UpClooSDKTests.h; sourceTree = "<group>"; };
+		42BF8FE3151082080040811E /* UpClooSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpClooSDKTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42BF8FC0151082080040811E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42BF8FC7151082080040811E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42BF8FCF151082080040811E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42BF8FD5151082080040811E /* SenTestingKit.framework in Frameworks */,
+				42BF8FD7151082080040811E /* UIKit.framework in Frameworks */,
+				42BF8FD8151082080040811E /* Foundation.framework in Frameworks */,
+				42BF8FDB151082080040811E /* libUpClooSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42BF8FB8151082070040811E = {
+			isa = PBXGroup;
+			children = (
+				42BF8FC8151082080040811E /* UpClooSDK */,
+				42BF8FDC151082080040811E /* UpClooSDKTests */,
+				42BF8FC5151082080040811E /* Frameworks */,
+				42BF8FC4151082080040811E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42BF8FC4151082080040811E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8FC3151082080040811E /* libUpClooSDK.a */,
+				42BF8FD3151082080040811E /* UpClooSDKTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42BF8FC5151082080040811E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8FC6151082080040811E /* Foundation.framework */,
+				42BF8FD4151082080040811E /* SenTestingKit.framework */,
+				42BF8FD6151082080040811E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42BF8FC8151082080040811E /* UpClooSDK */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8FCB151082080040811E /* UpClooSDK.h */,
+				42BF8FCC151082080040811E /* UpClooSDK.m */,
+				42BF8FC9151082080040811E /* Supporting Files */,
+			);
+			path = UpClooSDK;
+			sourceTree = "<group>";
+		};
+		42BF8FC9151082080040811E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42BF8FDC151082080040811E /* UpClooSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8FE2151082080040811E /* UpClooSDKTests.h */,
+				42BF8FE3151082080040811E /* UpClooSDKTests.m */,
+				42BF8FDD151082080040811E /* Supporting Files */,
+			);
+			path = UpClooSDKTests;
+			sourceTree = "<group>";
+		};
+		42BF8FDD151082080040811E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42BF8FDE151082080040811E /* UpClooSDKTests-Info.plist */,
+				42BF8FDF151082080040811E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		42BF8FC1151082080040811E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		42BF8FC2151082080040811E /* UpClooSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42BF8FE7151082080040811E /* Build configuration list for PBXNativeTarget "UpClooSDK" */;
+			buildPhases = (
+				42BF8FBF151082080040811E /* Sources */,
+				42BF8FC0151082080040811E /* Frameworks */,
+				42BF8FC1151082080040811E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UpClooSDK;
+			productName = UpClooSDK;
+			productReference = 42BF8FC3151082080040811E /* libUpClooSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		42BF8FD2151082080040811E /* UpClooSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42BF8FEA151082080040811E /* Build configuration list for PBXNativeTarget "UpClooSDKTests" */;
+			buildPhases = (
+				42BF8FCE151082080040811E /* Sources */,
+				42BF8FCF151082080040811E /* Frameworks */,
+				42BF8FD0151082080040811E /* Resources */,
+				42BF8FD1151082080040811E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42BF8FDA151082080040811E /* PBXTargetDependency */,
+			);
+			name = UpClooSDKTests;
+			productName = UpClooSDKTests;
+			productReference = 42BF8FD3151082080040811E /* UpClooSDKTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42BF8FBA151082070040811E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Walter Dal Mut";
+			};
+			buildConfigurationList = 42BF8FBD151082070040811E /* Build configuration list for PBXProject "UpClooSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42BF8FB8151082070040811E;
+			productRefGroup = 42BF8FC4151082080040811E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42BF8FC2151082080040811E /* UpClooSDK */,
+				42BF8FD2151082080040811E /* UpClooSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42BF8FD0151082080040811E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42BF8FE1151082080040811E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42BF8FD1151082080040811E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42BF8FBF151082080040811E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42BF8FCD151082080040811E /* UpClooSDK.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42BF8FCE151082080040811E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42BF8FE4151082080040811E /* UpClooSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42BF8FDA151082080040811E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42BF8FC2151082080040811E /* UpClooSDK */;
+			targetProxy = 42BF8FD9151082080040811E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42BF8FDF151082080040811E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42BF8FE0151082080040811E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42BF8FE5151082080040811E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		42BF8FE6151082080040811E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42BF8FE8151082080040811E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/UpClooSDK.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UpClooSDK/UpClooSDK-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		42BF8FE9151082080040811E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/UpClooSDK.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UpClooSDK/UpClooSDK-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		42BF8FEB151082080040811E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UpClooSDK/UpClooSDK-Prefix.pch";
+				INFOPLIST_FILE = "UpClooSDKTests/UpClooSDKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		42BF8FEC151082080040811E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UpClooSDK/UpClooSDK-Prefix.pch";
+				INFOPLIST_FILE = "UpClooSDKTests/UpClooSDKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42BF8FBD151082070040811E /* Build configuration list for PBXProject "UpClooSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42BF8FE5151082080040811E /* Debug */,
+				42BF8FE6151082080040811E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42BF8FE7151082080040811E /* Build configuration list for PBXNativeTarget "UpClooSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42BF8FE8151082080040811E /* Debug */,
+				42BF8FE9151082080040811E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		42BF8FEA151082080040811E /* Build configuration list for PBXNativeTarget "UpClooSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42BF8FEB151082080040811E /* Debug */,
+				42BF8FEC151082080040811E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42BF8FBA151082070040811E /* Project object */;
+}
