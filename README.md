@@ -4,9 +4,22 @@
 
 This SDK is intented for iOS applications
 
-## Example of usage
+## Load the library
 
-***todo: add docs for import ```.a``` static library***
+You can load the UpCloo Cocoa SDK in two ways:
+
+ * Using sources directly
+ * Load static library
+
+The first method is pretty simple, copy all ```.h``` and ```.c``` files
+into your project and use it.
+
+The second one is simple as well, move the ```.a``` into your framework
+group and move only ```.h``` header files into your project.
+
+That's it no big deal!
+
+## Example of usage
 
 First of all you have to require the SDK
 
