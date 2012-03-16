@@ -62,9 +62,8 @@ static UpClooSDK *sharedManager = nil;
             //Get form virtual sitekey
             repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY_VSITEKEY, self.sitekey, vsitekey, idKey];
         }
-        
         NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:repositoryUrl] 
-                                                    cachePolicy: NSURLRequestUseProtocolCachePolicy 
+                                                    cachePolicy: NSURLRequestReloadIgnoringLocalAndRemoteCacheData
                                                 timeoutInterval:8];
         NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest
                                                                          delegate:self];
@@ -104,8 +103,7 @@ static UpClooSDK *sharedManager = nil;
     //todo: parse the response and create upcloo document
     UpClooDocuments *documents = [[UpClooDocuments alloc] 
                                   initWithNSMutableData:receivedData];
-    
-    [self.delegate upclooContentsReady:documents];
+    [documents start];
 }
 
 @end

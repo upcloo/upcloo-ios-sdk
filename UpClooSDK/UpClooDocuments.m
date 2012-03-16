@@ -30,7 +30,7 @@
 
 - (void)start
 {
-    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:self.xmlData];
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:xmlData];
     parser.delegate = self;
     
     self.parseEnds = NO;
