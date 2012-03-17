@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSString *sitekey;
 @property (nonatomic, retain) NSMutableData *receivedData;
 
+#pragma mark Methods
 - (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey;
 
 @end

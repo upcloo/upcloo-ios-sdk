@@ -76,4 +76,10 @@
     [receivedData release];
 }
 
+- (oneway void)release
+{
+    [sitekey release];
+    [super release];
+}
+
 @end

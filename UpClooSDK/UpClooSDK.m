@@ -66,13 +66,15 @@ static UpClooSDK *sharedManager = nil;
 
 - (void)get:(NSString *)idKey
 {
-    UpClooGetManager *manager = [[UpClooGetManager alloc] init];
-    [manager getFromVirtualSitekey:idKey :nil];
+    [self getFromVirtualSitekey:idKey :nil];
 }
 
 - (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey
 {
+#warning using autorelease or support multiple gets?
+    //MEMORY LEAK!
     UpClooGetManager *manager = [[UpClooGetManager alloc] init];
+    manager.sitekey = self.sitekey;
     [manager getFromVirtualSitekey:idKey :vsitekey];
 }
 
