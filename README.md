@@ -1,7 +1,5 @@
 # UpCloo Cocoa Touch SDK
 
-***This library is completely unstable***
-
 This SDK is intented for iOS applications
 
 ## Load the library
