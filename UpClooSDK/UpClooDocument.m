@@ -12,4 +12,11 @@
 
 @synthesize title, url;
 
+- (oneway void)release{
+    [title release];
+    [url release];
+    
+    [super release];
+}
+
 @end

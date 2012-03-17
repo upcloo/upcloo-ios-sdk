@@ -364,6 +364,7 @@
 		42BF8FE8151082080040811E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/UpClooSDK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UpClooSDK/UpClooSDK-Prefix.pch";
@@ -376,6 +377,7 @@
 		42BF8FE9151082080040811E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DSTROOT = /tmp/UpClooSDK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UpClooSDK/UpClooSDK-Prefix.pch";

@@ -61,6 +61,8 @@
 {
     if ([elementName isEqual:ELEMENT_DOC]) {
         [documents addObject:document];
+        
+        //TODO: check id document needs to be released
     }
     
     actualElement = @"";
@@ -87,6 +89,18 @@
     //handle ends
     UpClooSDK *manager = [UpClooSDK sharedManager];
     [manager.delegate upclooContentsReady:self];
+    
+    [parser release];
+}
+
+- (oneway void)release
+{
+    [actualElement release];
+    [xmlData release];
+    
+    [documents release];
+    
+    [super release];
 }
 
 @end

@@ -22,9 +22,31 @@ static UpClooSDK *sharedManager = nil;
 + (id)sharedManager{
     @synchronized(self) {
         if (sharedManager == nil)
-            sharedManager = [[self alloc] init];
+            sharedManager = [[super allocWithZone:NULL] init];
     }
     return sharedManager;
+}
+
++ (id)allocWithZone:(NSZone *)zone {
+    return [[self sharedManager] retain];
+}
+- (id)copyWithZone:(NSZone *)zone {
+    return self;
+}
+
+- (id)retain {
+    return self;
+}
+
+- (unsigned)retainCount {
+    return UINT_MAX; //denotes an object that cannot be released
+}
+
+- (oneway void)release {
+    // never release
+}
+- (id)autorelease {
+    return self;
 }
 
 - (id)init {
@@ -32,10 +54,6 @@ static UpClooSDK *sharedManager = nil;
         vsitekeys = [[NSMutableArray alloc] init];
     }
     return self;
-}
-
-- (void)dealloc {
-    // Should never be called, but just here for clarity really.
 }
 
 - (void)setCredential: (NSString *)s: (NSString *)p
@@ -69,7 +87,7 @@ static UpClooSDK *sharedManager = nil;
                                                                          delegate:self];
 
         if (theConnection) {
-            receivedData = [NSMutableData data];
+            receivedData = [[NSMutableData data] retain];
         } else {
             [self.delegate upclooUnableToGetContentsWithMessage:
              [NSString stringWithFormat:
@@ -104,6 +122,9 @@ static UpClooSDK *sharedManager = nil;
     UpClooDocuments *documents = [[UpClooDocuments alloc] 
                                   initWithNSMutableData:receivedData];
     [documents start];
+    
+    [connection release];
+    [receivedData release];
 }
 
 @end
