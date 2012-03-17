@@ -11,10 +11,6 @@
 
 #define UPCLOO_FRONT_PATH           @"http://%@.update.upcloo.com/"
 
-#define UPCLOO_REPOSITORY_PATH      @"repository.upcloo.com"
-#define UPCLOO_REPOSITORY           @"http://repository.upcloo.com/%@/%@.xml"
-#define UPCLOO_REPOSITORY_VSITEKEY  @"http://repository.upcloo.com/%@/%@/%@.xml"
-
 @class UpClooDocument;
 
 @interface UpClooSDK : NSObject {
@@ -24,8 +20,6 @@
     NSMutableArray *vsitekeys;
 }
 
-+(id)sharedManager;
-
 @property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *sitekey;
 @property (nonatomic, retain) NSString *password;
@@ -34,8 +28,10 @@
 
 @property (nonatomic, retain) id <UpClooGetDelegate> delegate;
 
+#pragma mark Methods
++(id)sharedManager;
 - (void)setCredential: (NSString *)s :(NSString *)p;
-
 - (void)get:(NSString *)idKey;
+- (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey;
 
 @end
