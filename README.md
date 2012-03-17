@@ -51,7 +51,7 @@ If you prefere you can use ```setCredential()``` method instead property setting
 [sharedManager setCredential: @"my-sitekey", @"my-password"];
 ```
 
-### Using the SDK for getting documents
+## Using the SDK for getting documents
 
 UpCloo SDK use delegates for send messages asyncronously to your application. 
 When you ask for a document (using ```get``` method), UpCloo SDK detach threads
@@ -86,7 +86,7 @@ For using you have to implements it at your controller and implements methods.
 }
 ```
 
-## Documents structure
+### Documents structure (Get)
 
 Documents are divided into two containers: ```UpClooDocuments``` and ```UpClooDocument```. 
 First type encapsulate the second one using an ```NSArray``` structure.
@@ -101,6 +101,33 @@ for (i=0; i<documents.documents.count; i++) {
     NSLog(@"%@", document.title);
 }
 ```
+
+## Using SDK for posting documents (create/update)
+
+Posting new documents or update olds you have to follow a similar flow as 
+used during get flow.
+
+First of all you have to fill a new ```UpClooModelDocument``` and request 
+the indexing on ```UpClooManager``` shared manager. See it on an example:
+
+```
+UpClooModelDocument *model = [[UpClooModelDocument alloc] initWithIdAndTitle: @"post_14" : @"My title"];
+
+model.url = @"http://domain.ltd/my-link.html";
+model.summary = @"This is the summary";
+//Other fields of document model
+
+[[UpClooManager sharedManager] postContent: model];
+```
+
+Calls are async as get calls. If you want you can register a delegate and 
+listen for events. Two events are available: error, valid post content.
+For listen thoose events you have to implement the ```UpClooPutDelegate```
+protocol.
+
+That protocol have two methods: ```- (void)upclooUnableToPutThisContentWithMessage:(NSString *)message;```
+that is called when an error occur or the method: ```- (void)upclooPutCompleted;```. The last one is
+optional and that you can never implement this one.
 
 ## Unit Tests
 
