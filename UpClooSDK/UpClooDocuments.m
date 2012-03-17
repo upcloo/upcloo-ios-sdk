@@ -61,8 +61,6 @@
 {
     if ([elementName isEqual:ELEMENT_DOC]) {
         [documents addObject:document];
-        
-        //TODO: check id document needs to be released
     }
     
     actualElement = @"";
