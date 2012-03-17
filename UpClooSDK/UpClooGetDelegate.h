@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "UpClooDocuments.h"
+#import "UpClooGetManager.h"
 
 @protocol UpClooGetDelegate <NSObject>
 - (void)upclooContentsReady:(UpClooDocuments *)documents;

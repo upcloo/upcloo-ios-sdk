@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4235CF9015146B0400EF5B34 /* UpClooModelDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 4235CF8E15146B0400EF5B34 /* UpClooModelDocument.h */; };
+		4235CF9115146B0400EF5B34 /* UpClooModelDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4235CF8F15146B0400EF5B34 /* UpClooModelDocument.m */; };
+		4235CF9715146D8500EF5B34 /* UpClooGetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4235CF9515146D8500EF5B34 /* UpClooGetManager.h */; };
+		4235CF9815146D8500EF5B34 /* UpClooGetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4235CF9615146D8500EF5B34 /* UpClooGetManager.m */; };
 		429058EC15112BA600C5E16C /* UpClooDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 429058EA15112BA600C5E16C /* UpClooDocument.h */; };
 		429058ED15112BA600C5E16C /* UpClooDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058EB15112BA600C5E16C /* UpClooDocument.m */; };
 		429058F21511360300C5E16C /* UpClooDocuments.h in Headers */ = {isa = PBXBuildFile; fileRef = 429058F01511360300C5E16C /* UpClooDocuments.h */; };
@@ -34,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4235CF8E15146B0400EF5B34 /* UpClooModelDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooModelDocument.h; sourceTree = "<group>"; };
+		4235CF8F15146B0400EF5B34 /* UpClooModelDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooModelDocument.m; sourceTree = "<group>"; };
+		4235CF9315146C9D00EF5B34 /* UpClooPutDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooPutDelegate.h; sourceTree = "<group>"; };
+		4235CF9515146D8500EF5B34 /* UpClooGetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooGetManager.h; sourceTree = "<group>"; };
+		4235CF9615146D8500EF5B34 /* UpClooGetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooGetManager.m; sourceTree = "<group>"; };
 		429058EA15112BA600C5E16C /* UpClooDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocument.h; sourceTree = "<group>"; };
 		429058EB15112BA600C5E16C /* UpClooDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocument.m; sourceTree = "<group>"; };
 		429058EE15112D3100C5E16C /* UpClooGetDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpClooGetDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4235CF9415146D6E00EF5B34 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				4235CF9515146D8500EF5B34 /* UpClooGetManager.h */,
+				4235CF9615146D8500EF5B34 /* UpClooGetManager.m */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
 		429058E815112B8000C5E16C /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +105,8 @@
 				429058EB15112BA600C5E16C /* UpClooDocument.m */,
 				429058F01511360300C5E16C /* UpClooDocuments.h */,
 				429058F11511360300C5E16C /* UpClooDocuments.m */,
+				4235CF8E15146B0400EF5B34 /* UpClooModelDocument.h */,
+				4235CF8F15146B0400EF5B34 /* UpClooModelDocument.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -95,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				429058EE15112D3100C5E16C /* UpClooGetDelegate.h */,
+				4235CF9315146C9D00EF5B34 /* UpClooPutDelegate.h */,
 			);
 			name = delegates;
 			sourceTree = "<group>";
@@ -131,6 +152,7 @@
 		42BF8FC8151082080040811E /* UpClooSDK */ = {
 			isa = PBXGroup;
 			children = (
+				4235CF9415146D6E00EF5B34 /* managers */,
 				429058EF15112D3A00C5E16C /* delegates */,
 				429058E815112B8000C5E16C /* models */,
 				42BF8FCB151082080040811E /* UpClooSDK.h */,
@@ -180,6 +202,8 @@
 			files = (
 				429058EC15112BA600C5E16C /* UpClooDocument.h in Headers */,
 				429058F21511360300C5E16C /* UpClooDocuments.h in Headers */,
+				4235CF9015146B0400EF5B34 /* UpClooModelDocument.h in Headers */,
+				4235CF9715146D8500EF5B34 /* UpClooGetManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +308,8 @@
 				42BF8FCD151082080040811E /* UpClooSDK.m in Sources */,
 				429058ED15112BA600C5E16C /* UpClooDocument.m in Sources */,
 				429058F31511360300C5E16C /* UpClooDocuments.m in Sources */,
+				4235CF9115146B0400EF5B34 /* UpClooModelDocument.m in Sources */,
+				4235CF9815146D8500EF5B34 /* UpClooGetManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

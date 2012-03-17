@@ -19,12 +19,17 @@ static UpClooSDK *sharedManager = nil;
 
 @synthesize receivedData;
 
+@synthesize getManager;
+
 #pragma mark Singleton methods
 + (id)sharedManager{
     @synchronized(self) {
-        if (sharedManager == nil)
+        if (sharedManager == nil) {
             sharedManager = [[super allocWithZone:NULL] init];
             sharedManager.username = @"corley";
+            
+            sharedManager.getManager = [[UpClooGetManager alloc] init];
+        }
     }
     return sharedManager;
 }
@@ -71,13 +76,7 @@ static UpClooSDK *sharedManager = nil;
 
 - (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey
 {
-#warning using autorelease or support multiple gets?
-    //MEMORY LEAK!
-    UpClooGetManager *manager = [[UpClooGetManager alloc] init];
-    manager.sitekey = self.sitekey;
-    [manager getFromVirtualSitekey:idKey :vsitekey];
+    [getManager getFromVirtualSitekey:self.sitekey : idKey :vsitekey];
 }
-
-
 
 @end

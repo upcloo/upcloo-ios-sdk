@@ -11,7 +11,10 @@
 
 #define UPCLOO_FRONT_PATH           @"http://%@.update.upcloo.com/"
 
+#define RELEASE_GET_MANAGER         @"ReleaseGetManager"
+
 @class UpClooDocument;
+@class UpClooGetManager;
 
 @interface UpClooSDK : NSObject {
     NSString *username;
@@ -27,6 +30,8 @@
 @property (nonatomic, retain) NSMutableData *receivedData;
 
 @property (nonatomic, retain) id <UpClooGetDelegate> delegate;
+
+@property (nonatomic, retain) UpClooGetManager *getManager;
 
 #pragma mark Methods
 +(id)sharedManager;

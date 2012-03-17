@@ -11,10 +11,9 @@
 
 @implementation UpClooGetManager
 
-@synthesize sitekey;
 @synthesize receivedData;
 
-- (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey
+- (void)getFromVirtualSitekey: (NSString *)sitekey : (NSString *)idKey :(NSString *)vsitekey
 {
     UpClooSDK *manager = [UpClooSDK sharedManager];
     if (manager.delegate == nil) {
@@ -23,10 +22,10 @@
         NSString *repositoryUrl = nil;
         if (vsitekey == nil) {
             //Get from base repository
-            repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY, self.sitekey, idKey];
+            repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY, sitekey, idKey];
         } else {
             //Get form virtual sitekey
-            repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY_VSITEKEY, self.sitekey, vsitekey, idKey];
+            repositoryUrl = [NSString stringWithFormat:UPCLOO_REPOSITORY_VSITEKEY, sitekey, vsitekey, idKey];
         }
         NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:repositoryUrl] 
                                                     cachePolicy: NSURLRequestReloadIgnoringLocalAndRemoteCacheData
@@ -67,7 +66,6 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    //todo: parse the response and create upcloo document
     UpClooDocuments *documents = [[UpClooDocuments alloc] 
                                   initWithNSMutableData:receivedData];
     [documents start];
@@ -78,7 +76,6 @@
 
 - (oneway void)release
 {
-    [sitekey release];
     [super release];
 }
 

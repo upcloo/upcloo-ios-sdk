@@ -87,15 +87,14 @@
     //handle ends
     UpClooSDK *manager = [UpClooSDK sharedManager];
     [manager.delegate upclooContentsReady:self];
-    
+ 
+    [actualElement release];
+    [xmlData release];
     [parser release];
 }
 
 - (oneway void)release
 {
-    [actualElement release];
-    [xmlData release];
-    
     [documents release];
     
     [super release];
