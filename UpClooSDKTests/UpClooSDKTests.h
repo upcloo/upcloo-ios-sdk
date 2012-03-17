@@ -8,6 +8,11 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
+#define SITEKEY @"test-sitekey"
+#define PASSWORD @"example"
+#define CORLEY_USERNAME @"corley"
+#define USERNAME @"username"
+
 @interface UpClooSDKTests : SenTestCase
 
 @end

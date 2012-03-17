@@ -9,9 +9,6 @@
 #import "UpClooSDKTests.h"
 #import "UpClooSDK.h"
 
-#define SITEKEY @"test-sitekey"
-#define PASSWORD @"example"
-
 @implementation UpClooSDKTests
 
 - (void)setUp
@@ -37,6 +34,11 @@
     STAssertEquals(SITEKEY, manager.sitekey, @"Sitekey previously setted actually is missing...");
     
     STAssertEquals(PASSWORD, manager.password, @"Password previously setted actually is missing...");
+    STAssertEquals(CORLEY_USERNAME, manager.username, @"Username (front-url) previously setted actually is missing...");
+    
+    manager.username = USERNAME;
+    
+    STAssertEquals(USERNAME, manager.username, @"Username (front-url) previously setted actually is missing...");
 }
 
 - (void)testSetCredential

@@ -13,7 +13,7 @@ static UpClooSDK *sharedManager = nil;
 
 @implementation UpClooSDK
 
-@synthesize sitekey,password;
+@synthesize username, sitekey, password;
 @synthesize delegate;
 
 @synthesize receivedData;
@@ -23,6 +23,7 @@ static UpClooSDK *sharedManager = nil;
     @synchronized(self) {
         if (sharedManager == nil)
             sharedManager = [[super allocWithZone:NULL] init];
+            sharedManager.username = @"corley";
     }
     return sharedManager;
 }
