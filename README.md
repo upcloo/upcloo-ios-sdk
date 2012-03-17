@@ -17,6 +17,14 @@ group and move only ```.h``` header files into your project.
 
 That's it no big deal!
 
+### Compile with ARC support
+
+In order to compile the library into a project with ARC support
+you have to remove this one from UpCloo library. For do that simply open
+```BuildPhases``` tab under main project settings and for all 
+UpCloo's files add ```-fno-objc-arc``` property on ```Compile Source```
+section.
+
 ## Example of usage
 
 First of all you have to require the SDK
