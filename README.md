@@ -42,6 +42,7 @@ You have to set credentials during your bootstrap (application launch)
 ```
 UpClooSDK *upcloo = [UpClooSDK sharedManger];
 upcloo.sitekey = @"my-sitekey";
+//password is useless for only-get apps
 upcloo.password = @"my-password";
 ```
 
