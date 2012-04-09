@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol UpClooPutDelegate <NSObject>
-- (void)upclooPutCompleted;
 - (void)upclooUnableToPutThisContentWithMessage:(NSString *)message;
+
+@optional
+- (void)upclooPutCompleted;
+
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UpClooGetDelegate.h"
+#import "UpClooPutDelegate.h"
 
 #define UPCLOO_FRONT_PATH           @"http://%@.update.upcloo.com/"
 
@@ -30,6 +31,7 @@
 @property (nonatomic, retain) NSMutableData *receivedData;
 
 @property (nonatomic, retain) id <UpClooGetDelegate> delegate;
+@property (nonatomic, retain) id <UpClooPutDelegate> putDelegate;
 
 @property (nonatomic, retain) UpClooGetManager *getManager;
 

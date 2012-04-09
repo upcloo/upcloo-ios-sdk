@@ -8,26 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+#define ISO_TIMEZONE_UTC_FORMAT @"Z"
+#define ISO_TIMEZONE_OFFSET_FORMAT @"+%f:%f"
+
 @interface UpClooModelDocument : NSObject {
     NSString *idContent;
     NSString *title;
-    NSString *summary;
     NSString *content;
-    NSArray *tags;
-    NSArray *categories;
     NSDate *publishDate;
 }
 
 @property (nonatomic, retain) NSString *idContent;
 @property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *summary;
 @property (nonatomic, retain) NSString *content;
-@property (nonatomic, retain) NSArray *tags;
-@property (nonatomic, retain) NSArray *categories;
 @property (nonatomic, retain) NSDate *publishDate;
 
-- (id)initWithIdContent:(NSString *)value;
+- (id)initWithId: (NSString *)contentId;
+- (id)initWithIdAndTitle: (NSString *)contentId : (NSString *)contentTitle;
 
-- (void)asXML;
+- (NSString *)asXML;
 
 @end

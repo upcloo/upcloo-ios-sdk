@@ -15,7 +15,10 @@ static UpClooSDK *sharedManager = nil;
 @implementation UpClooSDK
 
 @synthesize username, sitekey, password;
+
+//Listeners
 @synthesize delegate;
+@synthesize putDelegate;
 
 @synthesize receivedData;
 

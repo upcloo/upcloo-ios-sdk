@@ -17,6 +17,8 @@
 		429058F31511360300C5E16C /* UpClooDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058F11511360300C5E16C /* UpClooDocuments.m */; };
 		429058FD15114FF600C5E16C /* UpClooDocumentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058FC15114FF600C5E16C /* UpClooDocumentsTests.m */; };
 		429059001511509F00C5E16C /* UpClooDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 429058FF1511509F00C5E16C /* UpClooDocumentTests.m */; };
+		42BA85D1151503E40092135E /* UpClooPutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 42BA85CF151503E30092135E /* UpClooPutManager.h */; };
+		42BA85D2151503E40092135E /* UpClooPutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BA85D0151503E30092135E /* UpClooPutManager.m */; };
 		42BF8FC7151082080040811E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FC6151082080040811E /* Foundation.framework */; };
 		42BF8FCD151082080040811E /* UpClooSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BF8FCC151082080040811E /* UpClooSDK.m */; };
 		42BF8FD5151082080040811E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BF8FD4151082080040811E /* SenTestingKit.framework */; };
@@ -52,6 +54,8 @@
 		429058FC15114FF600C5E16C /* UpClooDocumentsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocumentsTests.m; sourceTree = "<group>"; };
 		429058FE1511509F00C5E16C /* UpClooDocumentTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooDocumentTests.h; sourceTree = "<group>"; };
 		429058FF1511509F00C5E16C /* UpClooDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooDocumentTests.m; sourceTree = "<group>"; };
+		42BA85CF151503E30092135E /* UpClooPutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpClooPutManager.h; sourceTree = "<group>"; };
+		42BA85D0151503E30092135E /* UpClooPutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpClooPutManager.m; sourceTree = "<group>"; };
 		42BF8FC3151082080040811E /* libUpClooSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUpClooSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BF8FC6151082080040811E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42BF8FCA151082080040811E /* UpClooSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UpClooSDK-Prefix.pch"; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			children = (
 				4235CF9515146D8500EF5B34 /* UpClooGetManager.h */,
 				4235CF9615146D8500EF5B34 /* UpClooGetManager.m */,
+				42BA85CF151503E30092135E /* UpClooPutManager.h */,
+				42BA85D0151503E30092135E /* UpClooPutManager.m */,
 			);
 			name = managers;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				429058F21511360300C5E16C /* UpClooDocuments.h in Headers */,
 				4235CF9015146B0400EF5B34 /* UpClooModelDocument.h in Headers */,
 				4235CF9715146D8500EF5B34 /* UpClooGetManager.h in Headers */,
+				42BA85D1151503E40092135E /* UpClooPutManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 				429058F31511360300C5E16C /* UpClooDocuments.m in Sources */,
 				4235CF9115146B0400EF5B34 /* UpClooModelDocument.m in Sources */,
 				4235CF9815146D8500EF5B34 /* UpClooGetManager.m in Sources */,
+				42BA85D2151503E40092135E /* UpClooPutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +372,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -381,7 +389,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -453,7 +461,7 @@
 				42BF8FE6151082080040811E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		42BF8FE7151082080040811E /* Build configuration list for PBXNativeTarget "UpClooSDK" */ = {
 			isa = XCConfigurationList;
@@ -462,7 +470,7 @@
 				42BF8FE9151082080040811E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		42BF8FEA151082080040811E /* Build configuration list for PBXNativeTarget "UpClooSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -471,7 +479,7 @@
 				42BF8FEC151082080040811E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
