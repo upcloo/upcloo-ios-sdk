@@ -115,7 +115,7 @@ the indexing on ```UpClooManager``` shared manager. See it on an example:
 UpClooModelDocument *model = [[UpClooModelDocument alloc] initWithIdAndTitle: @"post_14" : @"My title"];
 
 model.url = @"http://domain.ltd/my-link.html";
-model.summary = @"This is the summary";
+model.content = @"This is the summary";
 //Other fields of document model
 
 [[UpClooManager sharedManager] postContent: model];
