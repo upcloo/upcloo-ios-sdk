@@ -130,6 +130,40 @@ That protocol have two methods: ```- (void)upclooUnableToPutThisContentWithMessa
 that is called when an error occur or the method: ```- (void)upclooPutCompleted;```. The last one is
 optional and that you can never implement this one.
 
+### Post/Put delegate
+
+For post/put new contents or updates old ones, you have to register a delegate for post/put operation.
+
+```
+//MyController.m
+UpClooSDK *manager = [UpClooSDK sharedManager];
+manager.putDelegate = self;
+```
+
+You have to be sure that your controller implements the put delegate protocol.
+
+```
+#import "UpClooPutDelegate.h"
+
+@interface MyCotroller : UIViewController <UpClooPutDelegate> {
+    - (void)upclooUnableToPutThisContentWithMessage:(NSString *)message
+   {
+       //Unable to store this content
+   }
+
+   //Optional method
+   - (void)upclooPutCompleted
+   {
+       //Sending OK
+   }
+}
+
+```
+
+Now you are ready to get messages from UpCloo SDK.
+
+Remember that method ```upclooPutCompleted``` is optional.
+
 ## Unit Tests
 
 All tests are into UpClooSDKTests folder
