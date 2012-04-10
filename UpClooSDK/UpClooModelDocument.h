@@ -14,12 +14,14 @@
 @interface UpClooModelDocument : NSObject {
     NSString *idContent;
     NSString *title;
+    NSURL *url;
     NSString *content;
     NSDate *publishDate;
 }
 
 @property (nonatomic, retain) NSString *idContent;
 @property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSURL *url;
 @property (nonatomic, retain) NSString *content;
 @property (nonatomic, retain) NSDate *publishDate;
 

@@ -16,6 +16,8 @@
 
 @class UpClooDocument;
 @class UpClooGetManager;
+@class UpClooPutManager;
+@class UpClooModelDocument;
 
 @interface UpClooSDK : NSObject {
     NSString *username;
@@ -34,11 +36,13 @@
 @property (nonatomic, retain) id <UpClooPutDelegate> putDelegate;
 
 @property (nonatomic, retain) UpClooGetManager *getManager;
+@property (nonatomic, retain) UpClooPutManager *putManager;
 
 #pragma mark Methods
 +(id)sharedManager;
 - (void)setCredential: (NSString *)s :(NSString *)p;
 - (void)get:(NSString *)idKey;
 - (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey;
+- (void)postContent:(UpClooModelDocument *)postDocument;
 
 @end

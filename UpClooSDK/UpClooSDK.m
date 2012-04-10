@@ -9,6 +9,8 @@
 #import "UpClooSDK.h"
 #import "UpClooDocuments.h"
 #import "UpClooGetManager.h"
+#import "UpClooPutManager.h"
+#import "UpClooModelDocument.h"
 
 static UpClooSDK *sharedManager = nil;
 
@@ -22,7 +24,7 @@ static UpClooSDK *sharedManager = nil;
 
 @synthesize receivedData;
 
-@synthesize getManager;
+@synthesize getManager, putManager;
 
 #pragma mark Singleton methods
 + (id)sharedManager{
@@ -32,6 +34,8 @@ static UpClooSDK *sharedManager = nil;
             sharedManager.username = @"corley";
             
             sharedManager.getManager = [[UpClooGetManager alloc] init];
+            sharedManager.putManager = [[UpClooPutManager alloc] init];
+                                         
         }
     }
     return sharedManager;
@@ -80,6 +84,11 @@ static UpClooSDK *sharedManager = nil;
 - (void)getFromVirtualSitekey:(NSString *)idKey :(NSString *)vsitekey
 {
     [getManager getFromVirtualSitekey:self.sitekey : idKey :vsitekey];
+}
+
+- (void)postContent:(UpClooModelDocument *)postDocument
+{
+    [putManager postContent:postDocument];
 }
 
 @end

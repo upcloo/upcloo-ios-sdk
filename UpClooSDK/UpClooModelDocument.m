@@ -12,6 +12,7 @@
 @implementation UpClooModelDocument
 
 @synthesize idContent;
+@synthesize url;
 @synthesize title;
 @synthesize content;;
 @synthesize publishDate;
@@ -60,6 +61,7 @@
 
 - (NSString *)asXML
 {
+    //TODO: Mount elements piece by piece
     UpClooSDK *manager = [UpClooSDK sharedManager];
     NSString *result = [NSString stringWithFormat:@"<model><username>%@</username><password>%@</password><id>%@</id><title>%@</title><content>%@</content><publish_date>%@<publish_date></model>", manager.username, manager.password,
                         self.idContent, self.title, self.content, [UpClooModelDocument dateToISO8601:self.publishDate]];
