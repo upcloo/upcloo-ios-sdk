@@ -45,12 +45,18 @@
         NSTimeZone *timeZone = [NSTimeZone localTimeZone];
         int offset = [timeZone secondsFromGMT];
         
-        NSMutableString *strFormat = [NSMutableString stringWithString:@"yyyyMMdd'T'HH:mm:ss"];
+        NSMutableString *strFormat = [NSMutableString stringWithString:@"yyyy-MM-dd'T'HH:mm:ss"];
         offset /= 60; //bring down to minutes
-        if (offset == 0)
+        if (offset == 0) {
             [strFormat appendString:ISO_TIMEZONE_UTC_FORMAT];
-        else
+        } else {
+            if (offset < 0) {
+                [strFormat appendString:@"-"];
+            } else {
+                [strFormat appendString:@"+"];
+            }
             [strFormat appendFormat:ISO_TIMEZONE_OFFSET_FORMAT, offset / 60, offset % 60];
+        }
         
         [sISO8601 setTimeStyle:NSDateFormatterFullStyle];
         [sISO8601 setDateFormat:strFormat];
@@ -58,13 +64,33 @@
     return[sISO8601 stringFromDate:date];
 }
 
+- (NSString *)mountAPiece:(NSString *)nodeName : (NSString *)nodeValue
+{
+    NSString *piece = nil;
+    
+    if (nodeValue != nil) {
+        piece = [NSString stringWithFormat:@"<%@>%@</%@>", nodeName, nodeValue, nodeName];
+    } else {
+        piece = @"";
+    }
+    
+    return piece;
+}
+
 
 - (NSString *)asXML
 {
-    //TODO: Mount elements piece by piece
+    //TODO: Mount escape characters
     UpClooSDK *manager = [UpClooSDK sharedManager];
-    NSString *result = [NSString stringWithFormat:@"<model><username>%@</username><password>%@</password><id>%@</id><title>%@</title><content>%@</content><publish_date>%@<publish_date></model>", manager.username, manager.password,
-                        self.idContent, self.title, self.content, [UpClooModelDocument dateToISO8601:self.publishDate]];
+    NSMutableString *result = [NSMutableString stringWithFormat:@"<model>%@%@%@%@%@%@%@</model>", 
+                               [self mountAPiece:@"sitekey" : manager.sitekey],
+                               [self mountAPiece:@"password" : manager.password],
+                               [self mountAPiece:@"id" : self.idContent],
+                               [self mountAPiece:@"title" : self.title],
+                               [self mountAPiece:@"url" : [self.url absoluteString]],
+                               [self mountAPiece:@"content" :self.content],
+                               [self mountAPiece:@"publish_date" :[UpClooModelDocument dateToISO8601:self.publishDate]]
+                               ];
     
     return result;
 }
@@ -74,6 +100,7 @@
     [self.idContent release];
     [self.title release];
     [self.content release];
+    [self.url release];
     [self.publishDate release];
     
     [super release];

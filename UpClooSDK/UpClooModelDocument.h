@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define ISO_TIMEZONE_UTC_FORMAT @"Z"
-#define ISO_TIMEZONE_OFFSET_FORMAT @"+%f:%f"
+#define ISO_TIMEZONE_OFFSET_FORMAT @"%02d:%02d"
 
 @interface UpClooModelDocument : NSObject {
     NSString *idContent;
@@ -27,6 +27,7 @@
 
 - (id)initWithId: (NSString *)contentId;
 - (id)initWithIdAndTitle: (NSString *)contentId : (NSString *)contentTitle;
++ (NSString *)dateToISO8601: (NSDate *)date;
 
 - (NSString *)asXML;
 
